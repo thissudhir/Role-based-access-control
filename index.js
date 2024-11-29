@@ -5,16 +5,16 @@ const userRoutes = require('./routes/userRoutes')
 const dbConnect = require("./config/db");
 
 const app = express();
-//middleware
+//INFO: middleware
 app.use(express.json());
-// routes 
+//INFO: routes 
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 
-// Connect to MongoDB
+//INFO: Connect to MongoDB
 dbConnect();
 
-//note: server
+//note:LOCAL SERVER server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

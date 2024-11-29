@@ -17,7 +17,7 @@ Watch the project in action:
 
 1. **User Authentication**:
 
-   - Users can register with a username and password.
+   - Users can register with a username, password and role.
    - Passwords are securely hashed using **bcrypt**.
    - Secure login with token-based authentication using **JWT**.
 
@@ -135,11 +135,18 @@ Readme.md
 
 ---
 
-## **Future Enhancements**
+## **Extension**
 
-- Implement **OAuth** for third-party authentication.
-- Add unit and integration tests.
-- Introduce logging and monitoring.
+- To read the highlighted comment install `Better Comments` extension from VS code extension.
+- And add open `setting.json` .
+- Paste `"better-comments.tags": [
+{
+  "tag": "INFO:",
+  "color": "#fff",
+  "strikethrough": false,
+  "backgroundColor": "#0EA5E9"
+},
+]`
 
 ---
 

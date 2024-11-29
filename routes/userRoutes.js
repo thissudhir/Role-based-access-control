@@ -15,7 +15,7 @@ router.get('/moderator', authenticate, authorize("admin", "moderator"), (req, re
     res.send('Welcome Moderator')
 })
 
-//Note: ALL CAN ACCESS 
+//Note: BOTH ADMIN AND USER CAN ACCESS 
 
 router.get('/user', authenticate, authorize("admin", "user"), (req, res) => {
     res.send('Welcome User')
