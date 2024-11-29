@@ -6,6 +6,13 @@ This project implements **Authentication**, **Authorization**, and **Role-Based 
 
 ---
 
+## **Video Walkthrough**
+
+Watch the project in action:
+[Video Walkthrough](https://drive.google.com/file/d/14jy-HB5uB36QEsTbAHxns-o9V9h4_pyt/view?usp=sharing)
+
+---
+
 ## **Features**
 
 1. **User Authentication**:
@@ -33,6 +40,30 @@ This project implements **Authentication**, **Authorization**, and **Role-Based 
 - **Mongoose** for database schema and interaction.
 - **bcrypt** for password hashing.
 - **JWT (JSON Web Token)** for secure token-based authentication.
+
+---
+
+## **File Structure**
+
+```
+config/
+   db.js                # MongoDB connection
+controllers/
+   authController.js    # Handles user registration and login
+middleware/
+   authenticate.js      # Authentication middleware
+   authorize.js         # Authorization middleware
+models/
+   userModel.js         # User schema and model
+routes/
+   authRoutes.js        # Routes for authentication
+   userRoutes.js        # Routes for user operations
+.gitignore
+index.js                # Entry point
+package.json
+package-lock.json
+Readme.md
+```
 
 ---
 
@@ -65,6 +96,7 @@ This project implements **Authentication**, **Authorization**, and **Role-Based 
 
 2. **Protected Routes**:
    - `GET /admin`: Accessible only by `Admin`.
+   - `GET /moderator`: Accessible by `Moderator` and `Admin`.
    - `GET /user`: Accessible by `User` and `Admin`.
 
 ---
@@ -74,8 +106,7 @@ This project implements **Authentication**, **Authorization**, and **Role-Based 
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository-url>
-   cd <project-directory>
+   git clone https://github.com/thissudhir/Role-based-access-control ./
    ```
 
 2. **Install Dependencies**:
@@ -117,5 +148,3 @@ This project implements **Authentication**, **Authorization**, and **Role-Based 
 This project is open-source and available under the MIT License.
 
 ---
-
-Feel free to customize the README to reflect additional project-specific details!
